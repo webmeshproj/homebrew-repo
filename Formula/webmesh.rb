@@ -5,13 +5,13 @@
 class Webmesh < Formula
   desc "Webmesh is a service mesh for the web"
   homepage "https://webmeshproj.github.io"
-  version "0.8.4"
+  version "0.9.0"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/webmeshproj/webmesh/releases/download/v0.8.4/webmesh_Darwin_arm64.tar.gz"
-      sha256 "686062cdedbeb7253eb72b2b8dca43bdd96e16b340fc3e4b26bf72fb7362f416"
+    if Hardware::CPU.intel?
+      url "https://github.com/webmeshproj/webmesh/releases/download/v0.9.0/webmesh_Darwin_x86_64.tar.gz"
+      sha256 "fccd379c7f65bccd46a4b21f5e9006ae49e7565e36abe296ae1ecce5259d6fcc"
 
       def install
         bin.install "webmesh-node"
@@ -22,9 +22,9 @@ class Webmesh < Formula
         system "#{bin}/wmctl completion fish > #{fish_completion}/wmctl.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/webmeshproj/webmesh/releases/download/v0.8.4/webmesh_Darwin_x86_64.tar.gz"
-      sha256 "b10bbf9fc75b29a6a4ac0dca4cd73731b0223f06979369ba9602be150bdd8b72"
+    if Hardware::CPU.arm?
+      url "https://github.com/webmeshproj/webmesh/releases/download/v0.9.0/webmesh_Darwin_arm64.tar.gz"
+      sha256 "09510541e2df94abdf33529f01f9543b1a9ae946df8ac903602a85e03ed23df3"
 
       def install
         bin.install "webmesh-node"
@@ -39,8 +39,8 @@ class Webmesh < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/webmeshproj/webmesh/releases/download/v0.8.4/webmesh_Linux_armv6.tar.gz"
-      sha256 "55e7fb72fc720df6b0f2ae1baa8d10873e81cd1154e7599dcc0c3c4d7885cc02"
+      url "https://github.com/webmeshproj/webmesh/releases/download/v0.9.0/webmesh_Linux_armv6.tar.gz"
+      sha256 "5690d195067ac2d53579775ab050faad6fb47c72f90b2d49452119e353670e70"
 
       def install
         bin.install "webmesh-node"
@@ -52,8 +52,8 @@ class Webmesh < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/webmeshproj/webmesh/releases/download/v0.8.4/webmesh_Linux_arm64.tar.gz"
-      sha256 "199615ebce0ec0c855c63b844015683c492d9ecedbdc5fab9747f7f75a223619"
+      url "https://github.com/webmeshproj/webmesh/releases/download/v0.9.0/webmesh_Linux_arm64.tar.gz"
+      sha256 "f64f6928db39b735e9825e9243a68abc3f232ca02fa6202be12fd984edf029b4"
 
       def install
         bin.install "webmesh-node"
@@ -65,8 +65,8 @@ class Webmesh < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/webmeshproj/webmesh/releases/download/v0.8.4/webmesh_Linux_x86_64.tar.gz"
-      sha256 "80f39dc628dca45de22febcaa473ff0d351a205214b6ad8c7897db471b2d72b5"
+      url "https://github.com/webmeshproj/webmesh/releases/download/v0.9.0/webmesh_Linux_x86_64.tar.gz"
+      sha256 "36187ba12a18d4091382680eef504d1ffbf4f1c4fa370e9defd512f4f9f28d6f"
 
       def install
         bin.install "webmesh-node"

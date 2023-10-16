@@ -11,7 +11,7 @@ class Webmesh < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/webmeshproj/webmesh/releases/download/v0.14.3/webmesh_Darwin_x86_64.tar.gz"
-      sha256 "7a045583b648587631c02ba135a085cad75bc832bb50788c8b21e9e8877347db"
+      sha256 "dc40dec7c47bbf4d7496920eeb7f7110903c16f870352b608a19dc53dcb9e818"
 
       def install
         bin.install "webmesh-node"
@@ -24,7 +24,7 @@ class Webmesh < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/webmeshproj/webmesh/releases/download/v0.14.3/webmesh_Darwin_arm64.tar.gz"
-      sha256 "3184a0a0c1a474b83b9993b3aba1f7c3a8b89aac33528c57d9f48a20f2f8a74c"
+      sha256 "2793d899ad04e161e90c79c723e9bd8274622c93ac56817105302a09df761f87"
 
       def install
         bin.install "webmesh-node"
@@ -40,7 +40,7 @@ class Webmesh < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/webmeshproj/webmesh/releases/download/v0.14.3/webmesh_Linux_armv6.tar.gz"
-      sha256 "98ff01440018b79ab756e822adf5ba50ea7216831bf87a77875b2f0d9b8511a8"
+      sha256 "b7ed948c0c83a334388aff5a353dbdf84c44239bb40c045ce784c32c546f33aa"
 
       def install
         bin.install "webmesh-node"
@@ -53,7 +53,7 @@ class Webmesh < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/webmeshproj/webmesh/releases/download/v0.14.3/webmesh_Linux_arm64.tar.gz"
-      sha256 "4d76cd52dbc93aef09b53d481144913b20eee40967f2be98a16f01ac8a177bcd"
+      sha256 "f06f4976ad34edfb38493dff87f30263152c8da4123cfc1750620fa6eff70427"
 
       def install
         bin.install "webmesh-node"
@@ -66,7 +66,7 @@ class Webmesh < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/webmeshproj/webmesh/releases/download/v0.14.3/webmesh_Linux_x86_64.tar.gz"
-      sha256 "eea113af9255f9e6b679cf2a80d54b5c3dbcf0aa69dfeee04301b929799c5c29"
+      sha256 "550bbcdc9cdb573b72fb766b00bce9d1a9aa057a93659c7691b5311e8a187ad9"
 
       def install
         bin.install "webmesh-node"
